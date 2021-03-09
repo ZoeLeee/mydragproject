@@ -11,7 +11,9 @@
         </div>
       </Header>
       <Container>
-        <Aside width="300px">Aside</Aside>
+        <Aside width="300px">
+          <LeftPanel />
+        </Aside>
         <Main>
           <div class="content">
             <div
@@ -33,6 +35,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import RightPanel from "@/components/RightPanel.vue"; // @ is an alias to /src
+import LeftPanel from "@/components/LeftPanel.vue"; // @ is an alias to /src
 import { Container, Header, Aside, Main, Button, Input } from "element-ui";
 
 @Component({
@@ -44,6 +47,7 @@ import { Container, Header, Aside, Main, Button, Input } from "element-ui";
     Button,
     Input,
     RightPanel,
+    LeftPanel,
   },
 })
 export default class Home extends Vue {
@@ -89,10 +93,10 @@ export default class Home extends Vue {
     }
   }
   .content {
-    background: #fff;
     overflow: auto;
     height: 100%;
     .editor {
+      background: #fff;
       margin: auto;
       position: relative;
     }
